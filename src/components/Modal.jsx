@@ -15,7 +15,6 @@ export default function Modal({ isOpen, onClose, category }) {
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6">
-          {/* Fluid Backdrop */}
           <motion.div
             initial={{ opacity: 0, backdropFilter: 'blur(0px)' }}
             animate={{ opacity: 1, backdropFilter: 'blur(16px)' }}
@@ -25,7 +24,6 @@ export default function Modal({ isOpen, onClose, category }) {
             className="absolute inset-0 bg-black/40"
           />
 
-          {/* Modal Container */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20, filter: 'blur(10px)' }}
             animate={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
@@ -33,10 +31,8 @@ export default function Modal({ isOpen, onClose, category }) {
             transition={{ type: 'spring', damping: 25, stiffness: 300, mass: 0.8 }}
             className="relative w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/10 bg-[#0a0a0a]/80 p-8 shadow-[0_0_80px_-20px_rgba(255,255,255,0.1)] backdrop-blur-2xl"
           >
-            {/* Ambient inner glow */}
             <div className="absolute -top-24 -left-24 h-48 w-48 rounded-full bg-white/5 blur-[50px]" />
             
-            {/* Header */}
             <div className="relative z-10 flex items-center justify-between pb-8">
               <div className="flex items-center gap-2 rounded-full border border-white/5 bg-white/5 px-3 py-1.5 backdrop-blur-md">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white" />
@@ -52,7 +48,6 @@ export default function Modal({ isOpen, onClose, category }) {
               </button>
             </div>
 
-            {/* Content Body */}
             <div className="relative z-10 my-4 text-center">
               <motion.h2 
                 initial={{ opacity: 0, y: 10 }}
@@ -64,7 +59,6 @@ export default function Modal({ isOpen, onClose, category }) {
               </motion.h2>
             </div>
 
-            {/* Actions */}
             <div className="relative z-10 mt-10 flex gap-3 sm:gap-4">
               <motion.button
                 whileHover={{ scale: 1.02 }}

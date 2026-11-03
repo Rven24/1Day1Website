@@ -35,7 +35,7 @@ export default function App() {
       stepCount++;
 
       if (stepCount < maxSteps) {
-        if (stepCount > 15) delay += 25; // perlambatan eksponensial di akhir
+        if (stepCount > 15) delay += 25;
         setTimeout(animate, delay);
       } else {
         const finalIndex = getRandomIndex();
@@ -44,7 +44,6 @@ export default function App() {
         setDisplayText(winnerCategory);
         setSelectedCategory(winnerCategory);
         
-        // Sedikit jeda dramatis sebelum pop-up muncul
         setTimeout(() => {
           setIsShuffling(false);
           setIsModalOpen(true);
@@ -58,7 +57,6 @@ export default function App() {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-between overflow-hidden bg-black font-sans selection:bg-white/30 text-white">
       
-      {/* 1. Fluid Background & Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_10%,transparent_100%)]" />
       
       <motion.div 
@@ -70,7 +68,6 @@ export default function App() {
         className="pointer-events-none absolute -top-[40%] left-1/2 h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-white/[0.03] blur-[100px]" 
       />
 
-      {/* 2. Header */}
       <header className="z-10 mt-8 flex flex-col items-center gap-4">
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
@@ -88,7 +85,6 @@ export default function App() {
         </motion.div>
       </header>
 
-      {/* 3. Main Display Area */}
       <main className="z-10 my-auto flex w-full max-w-3xl flex-col items-center justify-center px-6 text-center">
         <motion.div
           animate={{
@@ -109,7 +105,6 @@ export default function App() {
         </motion.div>
       </main>
 
-      {/* 4. Footer & Action Button */}
       <footer className="z-10 mb-12 flex flex-col items-center gap-6">
         <motion.button
           whileHover={{ scale: 1.03 }}
@@ -118,7 +113,6 @@ export default function App() {
           disabled={isShuffling}
           className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-full bg-white px-10 py-4 text-xs font-bold tracking-[0.2em] text-black transition-all disabled:pointer-events-none disabled:bg-white/10 disabled:text-white/30"
         >
-          {/* Subtle button hover glow */}
           <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-black/10 to-transparent transition-transform duration-700 ease-in-out group-hover:translate-x-full" />
           
           <RefreshCw className={`h-4 w-4 transition-transform duration-500 ${isShuffling ? 'animate-spin' : 'group-hover:rotate-180'}`} />
@@ -135,7 +129,6 @@ export default function App() {
         </motion.span>
       </footer>
 
-      {/* 5. Modal Result */}
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
