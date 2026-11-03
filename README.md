@@ -32,7 +32,6 @@ Challenge Shuffle menyediakan antarmuka pengguna yang minimalis dan responsif de
 
 ## Struktur Direktori
 
-'''text
 react-shuffle/
 - src/
   - components/
@@ -45,7 +44,6 @@ react-shuffle/
 - vite.config.js (Konfigurasi Vite dan plugin Tailwind)
 - package.json
 - README.md
-'''
 
 ---
 
