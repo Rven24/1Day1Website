@@ -6,7 +6,7 @@ Aplikasi web modern berbasis React dan Tailwind CSS untuk mengacak kategori ide 
 
 ## Ringkasan Proyek
 
-Challenge Shuffle menyediakan antarmuka pengguna yang minimalis dan responsif dengan performa tinggi. Aplikasi ini memuat 100 kategori website独立 dan menggunakan algoritma pengacakan berbasis distribusi seragam tanpa repetisi langsung.
+Challenge Shuffle menyediakan antarmuka pengguna yang minimalis dan responsif dengan performa tinggi. Aplikasi ini memuat 100 kategori website dan menggunakan algoritma pengacakan berbasis distribusi seragam tanpa repetisi langsung.
 
 ---
 
